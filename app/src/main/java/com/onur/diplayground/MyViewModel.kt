@@ -1,4 +1,10 @@
 package com.onur.diplayground
 
-class MyViewModel(private val repository: Repository) {
+import android.util.Log
+import javax.inject.Inject
+
+class MyViewModel @Inject constructor(private val repository: Repository) {
+    fun print() {
+        Log.d("onurTag",repository.getDataFromRemote())
+    }
 }
