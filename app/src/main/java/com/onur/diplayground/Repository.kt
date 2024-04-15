@@ -3,14 +3,11 @@ package com.onur.diplayground
 import android.util.Log
 import retrofit2.Retrofit
 
-class Repository() {
+class Repository(private val userDataFromLocal: UserDataFromLocal,
+                 private val userDataFromRemote: UserDataFromRemote) {
     companion object {
         const val TAG = "repository_class"
     }
-
-    val retrofit = Retrofit.Builder().baseUrl("https://www.google.com").build()
-    private val userDataFromLocal: UserDataFromLocal = UserDataFromLocal()
-    private val userDataFromRemote: UserDataFromRemote = UserDataFromRemote(retrofit)
     fun getDataFromLocal() {
         Log.d(TAG, "data from local")
     }
