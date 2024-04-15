@@ -19,11 +19,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val retrofit = Retrofit.Builder().baseUrl("https://www.google.com").build()
-        val userDataFromLocal = UserDataFromLocal()
-        val userDataFromRemote = UserDataFromRemote(retrofit)
-        val repository = Repository(userDataFromLocal, userDataFromRemote)
-        val viewModel = MyViewModel(repository)
+        val viewModel = MyViewModel()
         viewModel.print()
 
         findViewById<TextView>(R.id.tv_text).setOnClickListener {
