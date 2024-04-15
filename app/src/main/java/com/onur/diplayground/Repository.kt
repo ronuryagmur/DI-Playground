@@ -11,7 +11,8 @@ class Repository(private val userDataFromLocal: UserDataFromLocal,
         Log.d(TAG, "data from local")
     }
 
-    fun getDataFromRemote() {
+    fun getDataFromRemote(): String {
         Log.d(TAG, "data from remote")
+        return userDataFromRemote.getData()
     }
 }
