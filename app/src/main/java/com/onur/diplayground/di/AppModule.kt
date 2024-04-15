@@ -27,10 +27,10 @@ class AppModule {
         return UserDataFromRemote(retrofit)
     }
 
-    @Provides
-    fun provideUserDataFromLocal(): UserDataFromLocal {
-        return UserDataFromLocal()
-    }
+//    @Provides
+//    fun provideUserDataFromLocal(): UserDataFromLocal {
+//        return UserDataFromLocal()
+//    }
 
     @Singleton
     @Provides
