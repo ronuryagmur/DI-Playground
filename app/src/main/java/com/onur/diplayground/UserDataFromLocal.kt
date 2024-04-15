@@ -1,6 +1,8 @@
 package com.onur.diplayground
 
-class UserDataFromLocal {
+import javax.inject.Inject
+
+class UserDataFromLocal @Inject constructor() {
     fun getData() {
         TODO()
     }
